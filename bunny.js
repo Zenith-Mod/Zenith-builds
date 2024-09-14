@@ -44,25 +44,6 @@
     }
   });
 
-  // shims/promiseAllSettled.js
-  var allSettledFulfill, allSettledReject, mapAllSettled, allSettled;
-  var init_promiseAllSettled = __esm({
-    "shims/promiseAllSettled.js"() {
-      "use strict";
-      allSettledFulfill = (value) => ({
-        status: "fulfilled",
-        value
-      });
-      allSettledReject = (reason) => ({
-        status: "rejected",
-        reason
-      });
-      mapAllSettled = (item) => Promise.resolve(item).then(allSettledFulfill, allSettledReject);
-      allSettled = Promise.allSettled ??= (iterator) => {
-        return Promise.all(Array.from(iterator).map(mapAllSettled));
-      };
-    }
-  });
 
   // node_modules/.pnpm/@swc+helpers@0.5.13/node_modules/@swc/helpers/esm/_async_to_generator.js
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
@@ -1480,8 +1461,8 @@
       "use strict";
       init_asyncIteratorSymbol();
       init_promiseAllSettled();
-      DISCORD_SERVER = "https://discord.gg/XjYgWXHb9Q";
-      GITHUB = "https://github.com/pyoncord";
+      DISCORD_SERVER = "https://discord.gg/axylprojects";
+      GITHUB = "https://github.com/zenith-mod";
       HTTP_REGEX = /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_+.~#?&/=]*)$/;
       HTTP_REGEX_MULTI = /https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_+.~#?&//=]*)/g;
       VD_PROXY_PREFIX = "https://vd-plugins.github.io/proxy";
